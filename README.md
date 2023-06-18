@@ -19,9 +19,9 @@ With that out of the way:
 - Ease of use
 - Portablility
 - Not using external Librarys
-- Being Hopefully
+- Being Hopefully Fast
 
-# Fast How to build?
+# How to build?
 You dont need to build this "Library", all you need to do is to include "writer.c" and use its functions accordingly.
 An example is provided at "main.c".
 
