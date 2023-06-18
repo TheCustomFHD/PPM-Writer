@@ -12,8 +12,8 @@ With that out of the way:
 # What could change with later Updates
 - Addition of more Netpbm Formats
 - Better Code
-- Better Stablility
-- Better Portablility
+- Better Stability
+- Better Portability
 
 # What is this Projects Code-Goals
 - Ease of use
