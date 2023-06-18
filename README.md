@@ -26,3 +26,7 @@ You dont need to build this "Library", all you need to do is to include "writer.
 An example is provided at "main.c".
 
 Its tested to compile with GCC-13 on ArchLinux.
+
+# License and Stuff
+You can do whatever you want with this Code.
+I would appreciate to be given Credit, but its not necessary.
