@@ -19,7 +19,7 @@ int writeToPPM(char *path, int width, int height, int colorRange, uint8_t pixels
 
     /*
     Create Header for Binary Mode PPM File, example:
-    P6 (P3 for ASCII Encoding)
+    P6
     Width Height
     ColorRange (0-255)
     */
