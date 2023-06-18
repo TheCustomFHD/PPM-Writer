@@ -4,10 +4,15 @@
 
 int main(void)
 {
-    int replaceMe[3];
+    int width = 2;
+    int height = 2;
+    int colordepth = 1;
 
-    printf("Writing PPM\n");
-    writeToPPM("out.ppm", 160, 90, 15, replaceMe, (160 * 90));
+    //Array must be (Width * Height * 3). 3 for RGB, and must be a uint8_t, to stay under 8Bit (255 MAX color value for PPM)
+    uint8_t samplePic[12] = {0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1};
+
+    printf("Starting Writing PPM\n");
+    writeToPPM("out.ppm", width, height, colordepth, samplePic);
 
     return 0;
 }

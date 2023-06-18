@@ -1,10 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
-#include <string.h>
-#include <math.h>
 
-int writeToPPM(char *path, int width, int height, int colorRange, int pixelsRGB[], int totalPixelCount)
+int writeToPPM(char *path, int width, int height, int colorRange, uint8_t pixelsRGB[])
 {
     //Open FilePointer and Specify its overwrite and binary
     FILE *fptr;
@@ -23,24 +21,14 @@ int writeToPPM(char *path, int width, int height, int colorRange, int pixelsRGB[
     */
     char header[4] = "P6";
     fprintf(fptr, "%s\n%d %d\n%d\n", header, width, height, colorRange);
+    
+    //Calculate Total Array Length // ToDo: Figure out why -1 is needed, assumption because of a terminator or 0 as array start
+    int arrayLength = (width * height * 3);
 
-    uint8_t colorB = 0;
+    //Write Pixel Data
+    fwrite(pixelsRGB, sizeof(uint8_t), arrayLength, fptr); 
 
-    for (uint64_t y = 0; y < height; y = y + 1)
-    {
-        for (uint64_t x = 0; x < width; x = x +1)
-        {
-            uint8_t colorR = round((double)x / (double)width * (double)colorRange);
-            uint8_t colorG = round((double)y / (double)height * (double)colorRange);
-          
-            //printf("X:%d,Y:%d | R:%d,G:%d,B:%d\n", x, y, colorR, colorG, colorB);
-            fwrite(&colorR, sizeof(uint8_t), 1, fptr);
-            fwrite(&colorG, sizeof(uint8_t), 1, fptr);
-            fwrite(&colorB, sizeof(uint8_t), 1, fptr);
-        } 
-    }
-        
-
+    //Close Filepointer(Cleanup) and return
     fclose(fptr);
     return 0;
 }
