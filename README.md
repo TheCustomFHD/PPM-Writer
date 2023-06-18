@@ -1,5 +1,5 @@
 # PPM-Writer
-This is a C "Library" to easly write Images into a Netpbm File.
+This is a C "Library" to easily write Images into a Netpbm File.
 
 It's in Development, and is not particularly active.
 I dont promise that it will work flawlessly, nor that i will continue it.
@@ -18,7 +18,7 @@ With that out of the way:
 # What is this Projects Code-Goals
 - Ease of use
 - Portablility
-- Not using external Librarys
+- Not using external Libraries
 - Being Hopefully Fast
 
 # How to build?
