@@ -40,9 +40,12 @@ int writeToPPM(char *path, int width, int height, int colorRange, uint8_t pixels
         return 2;
     }
 
-    //printf("[DEBUG] FWRITE OUTPUT: %d\n", functionOutput);
-
     //Close Filepointer(Cleanup) and return
     fclose(fptr);
     return 0;
 }
+
+/*
+ToDo's:
+    -   Return errno instead of a random int, so no error gets lost. Also update the documentation afterwards.
+*/

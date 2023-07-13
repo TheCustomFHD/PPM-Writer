@@ -93,6 +93,6 @@ int main(void)
 }
 
 /*
-ToDo:   Add Mandelbrot Set Renderer, and make it output into singular uint8_t array thats 3 times larger
-        then total amopunt of pixels (R then G then B)
+ToDo's:
+    -   Empty for once :)
 */
