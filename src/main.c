@@ -52,11 +52,18 @@ int main(void)
     }
 
     //Mandelbrot
-    width = 1024;
-    height = 768;
+    width = 1980;
+    height = 1080;
     colordepth = 255;
 
-    uint8_t mandelset[2359296] = {0};
+    uint8_t* mandelset;
+    mandelset = malloc((width * height * 3) * sizeof(uint8_t));
+    if (mandelset == NULL)
+    {
+        perror("[ERROR] Status of malloc(): ");
+        return 0;
+    }
+
     int X = 0;
     int Y = 0;
 
@@ -80,6 +87,7 @@ int main(void)
     }
 
     functionOutput = writeToPPM("mandel.ppm", width, height, colordepth, mandelset);
+    free(mandelset);
 
     return 0;
 }
