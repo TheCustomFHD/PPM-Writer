@@ -13,7 +13,7 @@ int writeToPPM(char *path, int width, int height, int colorRange, uint8_t pixels
     fptr = fopen(path, "wb");
     if (fptr == NULL)
     {
-        perror("[ERROR] Status of fopen() in overwrite-text mode failed:");
+        perror("[ERROR] Status of fopen() in overwrite-text mode:");
         return 1;
     }
 
