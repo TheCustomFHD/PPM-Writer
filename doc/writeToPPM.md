@@ -29,7 +29,7 @@ An another example is this, which represents a 2 Wide and 3 High Image, with the
 ```C
 uint8_t Example2[18] = {0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1};
 ```
-<img src="writeToPPM_Example_2x3.png" alt="Example Picture" width="10%" style="image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges;"/>
+<img src="img/writeToPPM_Example_2x3.png" alt="Example Picture" width="10%" style="image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges;"/>
 
 ## Code Example
 Lets take the Second Example, and say we want to Output it, this is how it should be done:
