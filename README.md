@@ -1,3 +1,4 @@
+# Avoid using this for now. A full Library for NetPBM is coming soon.
 # PPM-Writer
 This is a C "Library" to easily write Images into Netpbm Files.
 
